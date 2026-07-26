@@ -1,0 +1,149 @@
+:root{
+    --background:#0D0D0D;
+    --sec-background:#1A1410;
+    --primary:#C6A15B;
+    --hover:#D9B46D;
+    --text:#F5F3EE;
+    --text-p:#B3B3B3;
+    --main-trans:all 0.6s ;
+    --footer-bg:#4e4b4b;
+}
+*{
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing: border-box !important;
+    font-family: "Cairo", sans-serif;
+    scroll-behavior: smooth;
+}
+.z-999{
+    z-index: 999;
+}
+.border-new {
+    border-radius: 10px 100px ;
+}
+.border-new:hover {
+    border-radius: 10px;
+    background-color: var(--hover);
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.bg-1 {
+    background-color: var(--background);
+}
+.bg-2 {
+    background-color: var(--sec-background);
+}
+.text-primaryg{
+    color: var(--primary);
+}
+.bg-primaryg{
+    background-color: var(--primary);
+}
+.bg-footer{
+    background-color: var(--footer-bg);
+}
+.bg-nav{
+    background-color: rgba(0, 0, 0, 0.667);
+}
+.text-p{
+    color: var(--text-p);
+}
+.text-normal {
+    color: var(--text);
+}
+.text-p {
+    color: var(--text);
+}
+.main-trans{
+    transition: var(--main-trans);
+}
+.link-hover:hover {
+    color: var(--hover) !important;
+    cursor: pointer;
+}
+.nazmy:hover{
+    text-shadow: #c1a536 1px 0 10px;
+}
+.link-hover::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: var(--hover);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: var(--main-trans) ;
+}
+.active-link {
+    color: var(--hover) !important;
+    cursor: pointer;
+}
+.active-link::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: var(--hover);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    transition: var(--main-trans) ;
+}
+
+.link-hover:hover::after {
+    transform: translateX(-50%) scale(1);
+}
+.w-30 {
+    width: 30%;
+}
+.w-fit {
+    width: fit-content !important;
+}
+/* Spcial Css */
+.home {
+    background-image: url(../img/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.home::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,.45);
+}
+.home .content {
+z-index: 2;
+text-shadow:0 3px 10px rgba(0,0,0,.4);
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.services  .container .card{
+    transition: 1s;
+}
+.services  .container .card:hover{
+    box-shadow: #ffcc00 0px 0 30px;
+    cursor: pointer;
+    transform: translate3d(0px, -10px, 100px);
+}
+@media (max-width:992px){
+    .w-md-100{
+        width: 100% !important;
+        padding: 2rem;
+    }
+}
+@media (max-width:1200px){
+    .w-xl-100{
+        width: 100% !important;
+        padding: 2rem;
+    }
+}
