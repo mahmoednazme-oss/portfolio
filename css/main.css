@@ -8,6 +8,9 @@
     --main-trans:all 0.6s ;
     --footer-bg:#4e4b4b;
 }
+section {
+    scroll-margin-top: 120px; /* اكتب هنا ارتفاع الناف بار عندك بالبكسل */
+}
 *{
     padding: 0 ;
     margin: 0 ;
