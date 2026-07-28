@@ -1,7 +1,7 @@
 let head = document.getElementById('head');
 console.log(head)
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 800){
+    if (window.scrollY > 700){
         head.classList.add('bg-nav')
     }else{
         head.classList.remove('bg-nav')
@@ -57,7 +57,7 @@ let funcount = function(){
         let set = setInterval(()=>{
             i++
             years.innerText = i.toLocaleString('ar-EG')
-            if(i == 25) clearInterval(set)
+            if(i == 5) clearInterval(set)
         } , 50)
     }
     if(document.getElementById('showrrooms')){
@@ -88,3 +88,11 @@ let funcount = function(){
         } , 12.5)
     }
 }
+const offcanvasElement = document.getElementById("offcanvasWithBothOptions");
+const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+
+document.querySelectorAll("#offcanvasWithBothOptions a").forEach(link => {
+    link.addEventListener("click", () => {
+        offcanvas.hide();
+    });
+});
