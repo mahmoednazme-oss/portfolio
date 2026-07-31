@@ -13,7 +13,7 @@ const navLinks = document.querySelectorAll('.links a');
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.8 // يعني أن السيكشن يعتبر نشطاً إذا ظهر منه 60% في الشاشة
+    threshold: 0.6 // يعني أن السيكشن يعتبر نشطاً إذا ظهر منه 60% في الشاشة
 };
 
 const observer = new IntersectionObserver((entries) => {
